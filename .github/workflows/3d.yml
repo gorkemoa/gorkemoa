@@ -1,0 +1,19 @@
+name: 3D-Contrib
+on:
+  schedule: [{cron: "30 0 * * *"}]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: yoshi389111/github-profile-3d-contrib@release
+        with:
+          USERNAME: gorkemoa
+      - name: Commit rendered assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Update 3D profile" || echo "no changes"
+          git push
