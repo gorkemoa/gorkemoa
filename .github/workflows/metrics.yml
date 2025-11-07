@@ -1,18 +1,32 @@
 name: Metrics
 on:
-  schedule: [{cron: "0 */12 * * *"}]
+  schedule: [{cron: "0 */12 * * *"}]   # 12 saatte bir
   workflow_dispatch:
+
+permissions:
+  contents: write        # <-- commit/push için şart
+  actions: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          # --- Kimlik / push izinleri ---
+          token: ${{ secrets.METRICS_TOKEN }}          # okuma için PAT (repo + read:user)
+          committer_token: ${{ secrets.GITHUB_TOKEN }} # yazma/push için otomatik token
+          committer_branch: main                       # varsayılan branch'in (genelde main)
+          filename: github-metrics.svg                 # köke yazılacak dosya adı
+          output_action: commit                        # çıktıyı commit et
+
+          # --- Genel ayarlar ---
           user: gorkemoa
           template: classic
           base: header, activity, repositories
           config_timezone: Europe/Istanbul
+
+          # --- Pluginler ---
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           plugin_habits: yes
@@ -20,7 +34,7 @@ jobs:
           plugin_achievements: yes
           plugin_achievements_threshold: C
           plugin_languages: yes
-          plugin_languages_sections: most-used
+          plugin_languages_sections: most-used         # recently-used şimdilik kapalı
           plugin_languages_details: percentage
           plugin_topics: yes
           plugin_topics_limit: 12
