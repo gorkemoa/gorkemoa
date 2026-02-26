@@ -23,11 +23,11 @@
 ### 🚀 Son Projelerim
 | Proje | Açıklama |
 |-------|-----------|
-| 🧠 **FlörtAI** | AI destekli ilişki analizi uygulaması – mesajlardan kişilik & ilişki raporu çıkarıyor. |
-| 🍽 **POS701** | Restoranlar için Flutter tabanlı adisyon & sipariş sistemi. Offline çalışır. |
-| 📦 **TodoBus** | İş yönetimi & CRM uygulaması. Görev, müşteri ve FCM bildirim entegrasyonu. |
-| ⚡️ **Snorya** | Wikipedia içeriklerini AI ile özetleyen, kart tabanlı bilgi keşif uygulaması. |
-| 🐾 **VetMeet (yakında)** | Veteriner randevu & pet sağlık yönetimi platformu. |
+| 🔁 Takasly | C2C takas & ikinci el değişim platformu. Kullanıcılar ürünlerini listeleyip doğrudan takas yapabiliyor. Topluluk odaklı büyüme modeli. |
+| 📦 TodoBus | Küçük ekipler için proje & müşteri yönetimi uygulaması. Görev takibi, CRM yapısı ve FCM bildirim entegrasyonu içerir. |
+| 🎨 Canvas701 | Sanat & tablo odaklı e-ticaret platformu. Sanatçıların eserlerini sergileyip satış yapabildiği yapı. |
+| 🏢 POS701 | Restoranlar için Flutter tabanlı adisyon & sipariş yönetim sistemi. Hızlı, sade ve operasyon odaklı. |
+| 📰 Franchise Market Türkiye | Franchise markalarını listeleyen ve girişimcileri markalarla buluşturan dijital platform. |
 
 ---
 
